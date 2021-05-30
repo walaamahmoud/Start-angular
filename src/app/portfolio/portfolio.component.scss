@@ -1,0 +1,69 @@
+.layer
+{
+    position: absolute;
+    top : 0 ;
+    right : 0 ;
+    bottom: 0;
+    left: 0;
+    background-color: #1abc9c;
+    color: #fff;
+    font-size: 4rem;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.portfolio .portfolio-item {
+    cursor: pointer;
+    position: relative;
+    display: block;
+    max-width: 25rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    
+}
+
+.portfolio .portfolio-item:hover .layer
+{
+    opacity: 0.9;
+}
+
+
+
+
+.modal-body .portfolio-modal-title
+{
+    font-size: 2.25rem;
+}
+
+
+
+.modal-content
+{
+    direction: rtl;
+   
+}
+ .close
+{
+        margin-right: 1.5rem;
+        margin-top: 1rem;
+        width: fit-content;
+        text-align: right;
+        font-size: 3rem;
+        line-height: 3rem;
+        color: #1abc9c;
+        opacity: 1;
+}
+ .close:hover
+{
+    opacity: 0.75;
+}
+
+
+@media (min-width: 992px)
+{
+        .modal-body .portfolio-modal-title
+    {
+        font-size: 3rem;
+        line-height: 2.5rem;;
+    }
+}

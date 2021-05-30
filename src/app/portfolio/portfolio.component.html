@@ -1,0 +1,61 @@
+<section class="page-section portfolio" id="portfolio">
+    <div class="container">
+        <h2 class="page-section-heading text-center text-uppercase sec mb-0">Portfolio</h2>
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon sec">
+                <i class="fas fa-star"></i>
+            </div>
+            <div class="divider-custom-line"></div>
+        </div>
+
+        <div class="row">
+           <div *ngFor="let image of images ; let i =index" [attr.data-target] ="'#portfolioModal'+i" class="col-md-6 col-lg-4  px-4 mb-5" data-toggle="modal">
+            <div  >
+
+                <div class="portfolio-item mx-auto">
+                    <img [src]="image.imgSrc" class="img-fluid" alt="">
+                    <div class="layer  d-flex justify-content-center align-items-center">
+                        <i class="fas fa-plus " aria-hidden="true"></i>
+                    </div>
+                </div>
+
+            </div>
+           </div>
+
+        </div>
+    </div>
+</section>
+ <div *ngFor="let image of images ; let i = index" [id]="'portfolioModal'+i" class="portfolio-modal modal fade"  tabindex="-1" [attr.aria-labelledby]= "'portfolioModal'+i+'Label'"style="display: none;" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content rounded">
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                     <i id="closeIcon" class="fas fa-times"></i>
+            </button>
+            <div class="modal-body text-center">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                             <h2 class="portfolio-modal-title sec text-uppercase mb-0" [id]="'portfolioModal'+i">{{image.imgName}}</h2>
+                             <div class="divider-custom">
+                                <div class="divider-custom-line"></div>
+                                <div class="divider-custom-icon sec mx-2">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="divider-custom-line"></div>
+                            </div>
+                           <img class="img-fluid rounded mb-5" [src]="image.imgSrc" alt="">
+                           <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                            <button class="btn btn-prim" data-dismiss="modal">
+                                <i class="closeIcon fas fa-times fa-fw"></i> 
+                                Close Window
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 
